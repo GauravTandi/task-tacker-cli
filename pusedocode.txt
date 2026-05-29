@@ -1,2 +1,42 @@
 # create choice for cmd add
 # need to add input to the list 
+
+!! how to create task properties specailly ID
+!! need to create json file for storage so to get ID
+    
+?? what to do if file not created and give error
+    AA - using x mode
+    ?? - if file already exists then again error
+
+!! inside json file items coming in string not inside list
+    AA - what i did was created list variable and put the new task there then send to json
+    ?? - it's getting overwritten AA- a append mode 
+    ** i realize that first i have to load json old data then append new data to it
+    ** i realize we can use overwrite w mode to help above realize because a mode
+        some how messed like [item1,[item1, item2]]
+    !! - need to add two task / more
+        a - i thought to load all then overwrite it.
+            ?? ['spectator mode', ['spectator mode']]
+                a - because passing new task in list of lets remove it type constructor - ['spectator mode', "['spectator mode']"] list+string 
+                a -> var[0] then put to newvar and data.append then created new json.dump to update with new values - AA
+
+!! creating task properties ie id descrip status todo
+    Skip - ?? i create this var tp in above so id value data+1 is not define
+            a - all id set to 1
+        Did - add the taskproperty variable to json file 
+            ?? - description values is in list [new_task] i want "new_task"
+            a  -> remove a list variable which take the new_task i directly put that task in description as a value
+            ?? - now its getting overwrite
+            a  -> i just need to load data and append the new TP variable to it then json.dump that to file 
+        
+        ??? - i create this var tp in above so id value data+1 is not define
+            a - all id set to none in the first time 
+            a1 -> now i think it will data + 1 will work a+
+            a1.1 -> to make a1 work let put a copy of it inside with open block a+
+
+
+!! printing tasks added successfully and the id: no. done 
+    a -> call the dictonary values with little string format
+
+
+    
