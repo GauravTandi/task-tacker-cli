@@ -1,0 +1,2 @@
+# create choice for cmd add
+# need to add input to the list 
