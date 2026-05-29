@@ -9,7 +9,7 @@ if "add" == sys.argv[1]:
         task_properties = [{
                 "id": None,
                 "description":task,
-                "status":(),
+                "status":"To-DO",
                 "createdAt":"CT",
                 "updatedAt":"UT"
                         }]
@@ -19,7 +19,7 @@ if "add" == sys.argv[1]:
                 task_properties = [{
                         "id": len(data) + 1,
                         "description":task,
-                        "status":(),
+                        "status":"To-do",
                         "createdAt":"CT",
                         "updatedAt":"UT"
                 }]
@@ -65,5 +65,20 @@ elif "update" == sys.argv[1]:
                                 data[num-1] = task # this enter the update in correct index position
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
+elif "mark" == (sys.argv[1]):
+        status = sys.argv[2]
+        num = sys.argv[3] ; num = int(num)
+        
+        with open("tasks.json", "r") as f:
+                data = json.load(f)
+                for task in data:
+                        if task["id"] == num:
+                                task["status"] = status
+                                data[num - 1] = task
+        with open("tasks.json","w") as f:
+                json.dump(data, f, indent=4)
+                print(f"{data[0]}")
+
+        
 else:
         print("Try again with - add , list")

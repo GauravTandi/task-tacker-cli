@@ -115,4 +115,15 @@
                                             data[num-1] = task # this enter the update in correct index position
                     with open("tasks.json","w") as f:
                             json.dump(data, f, indent=4)
-        
+
+
+# creating task mark in-progress or done
+    !! lets create elif entry checker block
+        ?? - why it went to else block     
+            elif "mark" == len(sys.argv[1]):
+                print("Hello there!")
+            └─$ python task-cli.py mark in-progress 1
+                Try again with - add , list
+            a - because you use len() 
+    !! load data then for loop change status and update data and dump it - done 
+

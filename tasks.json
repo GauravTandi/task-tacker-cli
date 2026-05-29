@@ -1,57 +1,22 @@
 [
     {
         "id": 1,
-        "description": "Be aware",
-        "status": [],
+        "description": "see",
+        "status": "done",
         "createdAt": "CT",
         "updatedAt": "UT"
     },
     {
         "id": 2,
-        "description": "observer",
-        "status": [],
+        "description": "watcher",
+        "status": "To-do",
         "createdAt": "CT",
         "updatedAt": "UT"
     },
     {
         "id": 3,
-        "description": "see your thought",
-        "status": [],
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 4,
-        "description": "task is to be good",
-        "status": [],
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 5,
-        "description": "witness",
-        "status": [],
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 6,
-        "description": "see wall",
-        "status": [],
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 7,
-        "description": "watch",
-        "status": [],
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 8,
-        "description": "Everthing decide how you interpret it.",
-        "status": [],
+        "description": "awareness",
+        "status": "To-do",
         "createdAt": "CT",
         "updatedAt": "UT"
     }
