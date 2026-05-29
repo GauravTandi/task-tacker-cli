@@ -39,4 +39,6 @@
     a -> call the dictonary values with little string format
 
 
-    
+# list all task 
+    !! if check list  
+    !! withopen load data and print text with little fromating  
