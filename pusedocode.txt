@@ -40,5 +40,79 @@
 
 
 # list all task 
-    !! if check list  
-    !! withopen load data and print text with little fromating  
+    !! if check list - d
+    !! withopen load data and print text with little fromating  - d
+
+
+# Update task name
+    !! if check list - d
+    !! i want to make something in which the num user giving it can select from dictonary
+        a - user giving ID of task --> if var[id] == num, give input then same update the value
+        bug - num is str fromat, have to be interger value
+        * - realize i have give an input box to user so he can update the value
+        ?- how to not let this print
+            1
+            4 number not in task
+            2
+            4 number not in task
+            3
+            4 number not in task
+            4
+            What to name this task:
+            a - remove else block but what about edge case
+            a -> elif will block will take all this elif task["id"] != int(num): PASS
+        ? - the update value not getting dump in json file
+            a1 - because you updating it first in data variable what you
+                are doing is directly dump old data variable 
+            a1.1 - also i have update it with its index position or use insert(num-1,task)
+                    ?? - its acting like while always ask for another input 
+                        if task["id"] == int(num):
+                                    update_task = input("What to name this task: ")
+                                    task["description"] = update_task
+                        here --->     # data.insert(int(num)-1,task)
+            a1.2 - lets put this line inside fileRW block of dump, OUTPUT- still same loop error
+            a1.3 - remove elif and else block
+            a1.4 - instead insert, use change method var[indexno.] = value - use
+            a1.4.4 - but i think i copy and put That TP vaiables inoder to use chage - no need its working without that tp
+            ?? - json.dump not puting data into file
+            a1.5 - try to give another read block above write block
+                    scraping this code because creating new problem and becoming complex
+                    with open("tasks.json", "r") as f:
+                    data = json.load(f)
+                        for task in data:
+                        # print(task["id"])
+                        if task["id"] == int(num):
+                                update_task = input("What to name this task: ")
+                                print(type(task))
+                                task["description"] = update_task
+                                print(task)
+                                print("\n")
+                                with open("tasks.json","r") as f:
+                                        data = json.load(f)
+                                with open("task.json","w") as f:  ## maybe name error was here because later i saw when i rewirte the entire code 
+                                        data[int(num)-1] = task
+                                        print(data)
+                                        json.dump(data, f, indent=4)
+                                        
+                        # elif task["id"] != int(num):
+                        #         pass                        
+                        # else:
+                        #         print(f"{num} number not in task")
+    !!! rewriting the code for taking input from the user an if elif block
+        a - find the id change the description -
+        tip - when doing code check each line what you excepting you getting
+        a -> it worked damm, look simple and working
+                elif "update" == sys.argv[1]:
+                    num = sys.argv[2]; num = int(num)
+                    update_task = input("Enter update task name: ")
+
+                    with open("tasks.json","r") as f:
+                            data = json.load(f)
+                            for task in data:
+                                    if task["id"] == num:
+                                            task["description"] = update_task
+                                            print(task)
+                                            data[num-1] = task # this enter the update in correct index position
+                    with open("tasks.json","w") as f:
+                            json.dump(data, f, indent=4)
+        

@@ -51,6 +51,19 @@ elif "list" == sys.argv[1]:
                 print("\nLisiting all tasks")
                 print("-------------------")
                 for task in data:
-                        print(f"{task["id"]}) {task["description"]}.")       
+                        print(f"{task["id"]}) {task["description"]}.")
+elif "update" == sys.argv[1]:
+        num = sys.argv[2]; num = int(num)
+        update_task = input("Enter update task name: ")
+
+        with open("tasks.json","r") as f:
+                data = json.load(f)
+                for task in data:
+                        if task["id"] == num:
+                                task["description"] = update_task
+                                print(task)
+                                data[num-1] = task # this enter the update in correct index position
+        with open("tasks.json","w") as f:
+                json.dump(data, f, indent=4)
 else:
         print("Try again with - add , list")

@@ -1,1 +1,1 @@
-range(1,100)
+data.insert(1-1,"t1")
