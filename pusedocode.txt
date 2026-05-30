@@ -128,12 +128,28 @@
     !! load data then for loop change status and update data and dump it - done 
 
 
-!! List all task that are done
+!! List all tasks that are done
     !! - checker block for entry - done lol
     !! - load data and print that only which status is done done-the-done ~hehe~ ;)
+    elif "list-done" == sys.argv[1]:
+        with open("tasks.json") as f:
+                data = json.load(f)
+                print("All task that are done :~")
+                for task in data:
+                        if task["status"] == "done":
+                                print(f"{task["id"]} - {task["description"]} /- {task["status"]}")
+ 
+!! List all tasks that are done Need to be doing right way 
+    !! - the checker should check 2 value if list    and    done both then only enter
+            a -> if "list" == sys.argv[1] and "done" == sys.argv[2]:  
+            ?? - problem occur that above is there list all task it goes to that and print all task
+                a -> put list done above the list all (it slove but feel there should be alternative way to do it)
+                a1 - we can say like there should be not second value in list-all or we can mention len of should this much 
+                    a1.1 -> elif "list" == sys.argv[1] and  2 == len(sys.argv): like this 
+                Both ways are right for now i just let this a1 in the script
+
 
 What else features/functionality can add
-List all tasks that are done
 List all tasks that are not-done (Todo)
 List all tasks that are in progress
 createdAt: The date and time when the task was created

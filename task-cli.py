@@ -1,18 +1,7 @@
 import sys , json
 
-# new_task = []
-
 if "add" == sys.argv[1]:
         task = sys.argv[2]
-
-        # i feel like i don't need this because i already have in filesRW block
-        task_properties = [{
-                "id": None,
-                "description":task,
-                "status":"To-DO",
-                "createdAt":"CT",
-                "updatedAt":"UT"
-                        }]
 
         with open("tasks.json", "r") as f:
                 data = json.load(f)
@@ -30,21 +19,10 @@ if "add" == sys.argv[1]:
         with open("tasks.json", "w") as f:
                 json.dump(data,f, indent=4)
         
-        print(f"Task added successfully! Task: {task_properties["description"]} (ID:{task_properties["id"]}) ")
+        print(f"\nTask added successfully!\nTask:- {task_properties["description"]} --> (ID:{task_properties["id"]}) ")
         
-                # with open("tasks.json",'x') as f:
-                #     json.dump(list_of_tasks, f)
 
-                # try:
-                #     pass
-                # except FileExistsError:
-                #     with open("tasks.json","a") as f:
-                #         data = json.load(f)
-                #         # data.append(new_task)
-                #         json.dump(data, f)
-                #         # print(new_task)
-                # # when no error
-elif "list" == sys.argv[1]:
+elif "list" == sys.argv[1] and  2 == len(sys.argv):
         with open("tasks.json", "r") as f:
                 data = json.load(f)
 
@@ -52,14 +30,16 @@ elif "list" == sys.argv[1]:
                 print("-------------------")
                 for task in data:
                         print(f"{task["id"]}) {task["description"]}.")
-elif "list-done" == sys.argv[1]:
-        with open("tasks.json") as f:
+
+elif "list" == sys.argv[1] and "done" == sys.argv[2]:
+        with open("tasks.json","r") as f:
                 data = json.load(f)
-                print("All task that are done :~")
+                print("\nHere all task that are done")
+                print("----------------------------")
                 for task in data:
                         if task["status"] == "done":
-                                print(f"{task["id"]} - {task["description"]} /- {task["status"]}")
-
+                                print(f"{task["id"]}- {task["description"]} /- {task["status"]}")
+                                
 
 elif "update" == sys.argv[1]:
         num = sys.argv[2]; num = int(num)
@@ -74,6 +54,7 @@ elif "update" == sys.argv[1]:
                                 data[num-1] = task # this enter the update in correct index position
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
+                
 elif "mark" == (sys.argv[1]):
         status = sys.argv[2]
         num = sys.argv[3] ; num = int(num)

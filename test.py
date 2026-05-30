@@ -1,5 +1,4 @@
-data = ["task1","t2", "t3", "t4"]
-# data.insert(1-1,"t1")
+import sys
 
-data[0] = "t1"
-print(data)
+if "list" == sys.argv[1] and "done" == sys.argv[2]:
+    print("Yes its working")
