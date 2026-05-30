@@ -52,6 +52,15 @@ elif "list" == sys.argv[1]:
                 print("-------------------")
                 for task in data:
                         print(f"{task["id"]}) {task["description"]}.")
+elif "list-done" == sys.argv[1]:
+        with open("tasks.json") as f:
+                data = json.load(f)
+                print("All task that are done :~")
+                for task in data:
+                        if task["status"] == "done":
+                                print(f"{task["id"]} - {task["description"]} /- {task["status"]}")
+
+
 elif "update" == sys.argv[1]:
         num = sys.argv[2]; num = int(num)
         update_task = input("Enter update task name: ")
@@ -78,7 +87,5 @@ elif "mark" == (sys.argv[1]):
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
                 print(f"{data[0]}")
-
-        
 else:
         print("Try again with - add , list")

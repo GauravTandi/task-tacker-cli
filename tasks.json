@@ -16,7 +16,7 @@
     {
         "id": 3,
         "description": "awareness",
-        "status": "To-do",
+        "status": "done",
         "createdAt": "CT",
         "updatedAt": "UT"
     }

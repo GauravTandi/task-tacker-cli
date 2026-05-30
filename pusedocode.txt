@@ -127,3 +127,17 @@
             a - because you use len() 
     !! load data then for loop change status and update data and dump it - done 
 
+
+!! List all task that are done
+    !! - checker block for entry - done lol
+    !! - load data and print that only which status is done done-the-done ~hehe~ ;)
+
+What else features/functionality can add
+List all tasks that are done
+List all tasks that are not-done (Todo)
+List all tasks that are in progress
+createdAt: The date and time when the task was created
+updatedAt: The date and time when the task was last updated
+Delete tasks
+The JSON file should be created if it does not exist.
+Write a good readme file on how to use your Task Tracker CLI.
