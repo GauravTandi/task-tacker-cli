@@ -156,9 +156,10 @@
         then its look good to my eye atlease if its medium of low its feel odd to me 
         strange its look good when equal or less but in terminal output it feel weird
 
+!! List all tasks that are in progress
+    !! same as both 
 
 What else features/functionality can add
-List all tasks that are in progress
 createdAt: The date and time when the task was created
 updatedAt: The date and time when the task was last updated
 Delete tasks

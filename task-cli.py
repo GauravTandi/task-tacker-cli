@@ -26,8 +26,8 @@ elif "list" == sys.argv[1] and  2 == len(sys.argv):
         with open("tasks.json", "r") as f:
                 data = json.load(f)
 
-                print("\nLisiting all tasks")
-                print("-------------------")
+                print("\nHere list of all task.")
+                print("---------------------")
                 for task in data:
                         print(f"ID:{task["id"]}) {task["description"]}.")
 
@@ -38,7 +38,7 @@ elif "list" == sys.argv[1] and "done" == sys.argv[2]:
                 print("----------------------------")
                 for task in data:
                         if task["status"] == "done":
-                                print(f"ID:{task["id"]}- {task["description"]} /- {task["status"]}")
+                                print(f"ID:{task["id"]}- {task["description"]} /-{task["status"]}")
 
 elif "list" == sys.argv[1] and "todo" == sys.argv[2]:
         with open("tasks.json", "r") as f:
@@ -47,7 +47,16 @@ elif "list" == sys.argv[1] and "todo" == sys.argv[2]:
                 print("----------------------------")
                 for task in data:
                         if task["status"] == "todo":
-                                print(f"ID:{task["id"]}- {task["description"]} /- {task["status"]}")
+                                print(f"ID:{task["id"]}- {task["description"]} /-{task["status"]}")
+
+elif "list" == sys.argv[1] and "in-progress" == sys.argv[2]:
+        with open("tasks.json","r") as f:
+                data = json.load(f)
+                print("\nHere the task that in-progress")
+                print("---------------------------------")
+                for task in data:
+                        if task["status"] == "in-progress":
+                                print(f"ID:{task["id"]}- {task["description"]} /-{task["status"]}")
 
 elif "update" == sys.argv[1]:
         num = sys.argv[2]; num = int(num)
@@ -75,6 +84,6 @@ elif "mark" == (sys.argv[1]):
                                 data[num - 1] = task
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
-                print(f"{data[0]}")
+                
 else:
         print("Try again with - add , list")
