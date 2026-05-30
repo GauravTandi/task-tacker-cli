@@ -159,9 +159,16 @@
 !! List all tasks that are in progress
     !! same as both 
 
+!!createdAt: The date and time when the task was created
+    !! import the module datetime
+    !! how to use it 
+        a- now = now.strftime("%d-%m-%y  %H:%M:%S")
+    ?? how to put this but 
+
+!! updatedAt: The date and time when the task was last updated
+
+
 What else features/functionality can add
-createdAt: The date and time when the task was created
-updatedAt: The date and time when the task was last updated
 Delete tasks
 The JSON file should be created if it does not exist.
 Write a good readme file on how to use your Task Tracker CLI.
