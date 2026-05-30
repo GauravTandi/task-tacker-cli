@@ -9,7 +9,7 @@
     {
         "id": 2,
         "description": "watcher",
-        "status": "To-do",
+        "status": "todo",
         "createdAt": "CT",
         "updatedAt": "UT"
     },
@@ -23,7 +23,14 @@
     {
         "id": 4,
         "description": "do-totally whatever you do.",
-        "status": "To-do",
+        "status": "todo",
+        "createdAt": "CT",
+        "updatedAt": "UT"
+    },
+    {
+        "id": 5,
+        "description": "be yourself and do the best what you can do.",
+        "status": "todo",
         "createdAt": "CT",
         "updatedAt": "UT"
     }

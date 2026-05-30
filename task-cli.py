@@ -1,14 +1,14 @@
-import sys , json
+import sys, json
 
 if "add" == sys.argv[1]:
         task = sys.argv[2]
-
+        
         with open("tasks.json", "r") as f:
                 data = json.load(f)
                 task_properties = [{
                         "id": len(data) + 1,
                         "description":task,
-                        "status":"To-do",
+                        "status":"todo",
                         "createdAt":"CT",
                         "updatedAt":"UT"
                 }]
@@ -29,7 +29,7 @@ elif "list" == sys.argv[1] and  2 == len(sys.argv):
                 print("\nLisiting all tasks")
                 print("-------------------")
                 for task in data:
-                        print(f"{task["id"]}) {task["description"]}.")
+                        print(f"ID:{task["id"]}) {task["description"]}.")
 
 elif "list" == sys.argv[1] and "done" == sys.argv[2]:
         with open("tasks.json","r") as f:
@@ -38,8 +38,16 @@ elif "list" == sys.argv[1] and "done" == sys.argv[2]:
                 print("----------------------------")
                 for task in data:
                         if task["status"] == "done":
-                                print(f"{task["id"]}- {task["description"]} /- {task["status"]}")
-                                
+                                print(f"ID:{task["id"]}- {task["description"]} /- {task["status"]}")
+
+elif "list" == sys.argv[1] and "todo" == sys.argv[2]:
+        with open("tasks.json", "r") as f:
+                data = json.load(f)
+                print("\nHere are the all task todo")
+                print("----------------------------")
+                for task in data:
+                        if task["status"] == "todo":
+                                print(f"ID:{task["id"]}- {task["description"]} /- {task["status"]}")
 
 elif "update" == sys.argv[1]:
         num = sys.argv[2]; num = int(num)
@@ -54,7 +62,7 @@ elif "update" == sys.argv[1]:
                                 data[num-1] = task # this enter the update in correct index position
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
-                
+
 elif "mark" == (sys.argv[1]):
         status = sys.argv[2]
         num = sys.argv[3] ; num = int(num)

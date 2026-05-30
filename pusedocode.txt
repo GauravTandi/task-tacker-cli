@@ -148,9 +148,16 @@
                     a1.1 -> elif "list" == sys.argv[1] and  2 == len(sys.argv): like this 
                 Both ways are right for now i just let this a1 in the script
 
+!! List all tasks that are not-done (Todo)
+    !! - yeah same as list-done 
+    ** - i realize something about style
+        The dashes should be greater then text
+        -----------------------------------------
+        then its look good to my eye atlease if its medium of low its feel odd to me 
+        strange its look good when equal or less but in terminal output it feel weird
+
 
 What else features/functionality can add
-List all tasks that are not-done (Todo)
 List all tasks that are in progress
 createdAt: The date and time when the task was created
 updatedAt: The date and time when the task was last updated
