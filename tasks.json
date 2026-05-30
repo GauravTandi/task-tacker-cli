@@ -1,73 +1,52 @@
 [
     {
         "id": 1,
-        "description": "see",
-        "status": "done",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "description": "task1",
+        "status": "todo",
+        "createdAt": "Date 30-05-26 / 18 hr : 03 min : 58 sec",
+        "updatedAt": null
     },
     {
         "id": 2,
-        "description": "watcher",
+        "description": "task2",
         "status": "todo",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 06 sec",
+        "updatedAt": null
     },
     {
         "id": 3,
-        "description": "awareness",
-        "status": "done",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "description": "task3",
+        "status": "todo",
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 10 sec",
+        "updatedAt": null
     },
     {
         "id": 4,
-        "description": "do-totally whatever you do.",
+        "description": "task4",
         "status": "todo",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 14 sec",
+        "updatedAt": null
     },
     {
         "id": 5,
-        "description": "be yourself and do the best what you can do.",
+        "description": "task5",
         "status": "todo",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 16 sec",
+        "updatedAt": null
     },
     {
         "id": 6,
-        "description": "\"Buy milk and some products.\"",
-        "status": "done",
-        "createdAt": "CT",
-        "updatedAt": "UT"
+        "description": "task6",
+        "status": "todo",
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 20 sec",
+        "updatedAt": null
     },
     {
         "id": 7,
-        "description": "Build project",
-        "status": "in-progress",
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 8,
-        "description": "Drink-water",
-        "status": "in-progress",
-        "createdAt": "CT",
-        "updatedAt": "UT"
-    },
-    {
-        "id": 9,
-        "description": "sit and do nothing just seee",
+        "description": "task7",
         "status": "todo",
-        "createdAt": "Date 30-05-26 / 12 hr : 39 min : 01 sec",
-        "updatedAt": "UT",
-        "updatedAT": "Date 30-05-26 / 12hr : 43min : 28 sec"
-    },
-    {
-        "id": 10,
-        "description": "gym",
-        "status": "todo",
-        "createdAt": "Date 30-05-26 / 12 hr : 45 min : 56 sec",
-        "updatedAt": null
+        "createdAt": "Date 30-05-26 / 18 hr : 04 min : 22 sec",
+        "updatedAt": null,
+        "updatedAT": "Date 30-05-26 / 18hr : 04min : 46 sec"
     }
 ]

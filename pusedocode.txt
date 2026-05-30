@@ -1,4 +1,4 @@
-# create choice for cmd add
+# create choice for cmd add - done
 # need to add input to the list 
 
 !! how to create task properties specailly ID
@@ -167,8 +167,21 @@
 
 !! updatedAt: The date and time when the task was last updated
 
+!! Delete tasks 
+        !! take ID:no. and select that pop or del ? or remove how to del item in dict 
+            a - able to delete task with id 
+        ?? once you Delete the ID: of any one item it will change the order so reorder/rearrangeID
+            count how many values are there in data now
+            ** - if nothing you write in W mode then if original file content any data will gone and be blank bye bye all task inshort
+            ** - i just realize there is not need to delete just send all other in elif block
+        !! just making simple delete no rearrange ID no.
+           a - this do work but crash when like ID is 3 item in list 2 
+                data.pop(num-1)
+        finally it is feel so damn good 
+            a - take all task except the one you want delete then i just created new list outside the 
+                for loop and append all_task in that list of vaiable then data just dump to file
+
 
 What else features/functionality can add
-Delete tasks
 The JSON file should be created if it does not exist.
 Write a good readme file on how to use your Task Tracker CLI.

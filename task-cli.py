@@ -89,6 +89,19 @@ elif "mark" == (sys.argv[1]):
                                 data[num - 1] = task
         with open("tasks.json","w") as f:
                 json.dump(data, f, indent=4)
+
+elif "delete" == sys.argv[1]:
+        num = sys.argv[2]; num = int(num)
+        with open("tasks.json", "r") as f:
+                data = json.load(f)
+                all_task = []
+                for task in data:
+                        if task["id"] != num:
+                                all_task.append(task)
+                                
+                data = all_task                                       
+        with open("tasks.json", "w") as f:
+                json.dump(data, f, indent=4)        
                 
 else:
         print("Try again with - add , list")
