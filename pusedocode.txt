@@ -185,6 +185,10 @@
         !! use Try and except to slove this - FileNotFoundError
             a - create file with x+ mode then just write = [] so when you add everything go inside list
 
+!! imporve the else block - done
+
+!! Write a good readme file on how to use your Task Tracker CLI.
+
+
 What else features/functionality can add
-imporve the else block 
-Write a good readme file on how to use your Task Tracker CLI.
+        now just any error/ bug fix / improvement only.
