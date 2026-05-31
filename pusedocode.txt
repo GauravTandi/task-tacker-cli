@@ -181,7 +181,10 @@
             a - take all task except the one you want delete then i just created new list outside the 
                 for loop and append all_task in that list of vaiable then data just dump to file
 
+!! The JSON file should be created if it does not exist.
+        !! use Try and except to slove this - FileNotFoundError
+            a - create file with x+ mode then just write = [] so when you add everything go inside list
 
 What else features/functionality can add
-The JSON file should be created if it does not exist.
+imporve the else block 
 Write a good readme file on how to use your Task Tracker CLI.

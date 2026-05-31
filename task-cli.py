@@ -2,28 +2,30 @@ import sys, json, datetime
 
 if "add" == sys.argv[1]:
         task = sys.argv[2]
-        
-        with open("tasks.json", "r") as f:
-                data = json.load(f)
-                now = datetime.datetime.now()
-                now = now.strftime("Date %d-%m-%y / %H hr : %M min : %S sec")
-                task_properties = [{
-                        "id": len(data) + 1,
-                        "description":task,
-                        "status":"todo",
-                        "createdAt":now,
-                        "updatedAt":None
-                }]
-                task_properties = task_properties[0]
-                data.append(task_properties)
-                # print(data)
-                print(task_properties) 
+        try:
+                with open("tasks.json", "r") as f:
+                        data = json.load(f)
+                        now = datetime.datetime.now()
+                        now = now.strftime("Date %d-%m-%y / %H hr : %M min : %S sec")
+                        task_properties = [{
+                                "id": len(data) + 1,
+                                "description":task,
+                                "status":"todo",
+                                "createdAt":now,
+                                "updatedAt":None
+                        }]
+                        task_properties = task_properties[0]
+                        data.append(task_properties)
+                        # print(data)
+                        print(task_properties) 
 
-        with open("tasks.json", "w") as f:
-                json.dump(data,f, indent=4)
-        
-        print(f"\nTask added successfully!\nTask:- {task_properties["description"]} --> (ID:{task_properties["id"]}) ")
-        
+                with open("tasks.json", "w") as f:
+                        json.dump(data,f, indent=4)
+                
+                print(f"\nTask added successfully!\nTask:- {task_properties["description"]} --> (ID:{task_properties["id"]}) ")
+        except FileNotFoundError:
+                with open("tasks.json", "x+") as f:
+                        f.write("[]") 
 
 elif "list" == sys.argv[1] and  2 == len(sys.argv):
         with open("tasks.json", "r") as f:
