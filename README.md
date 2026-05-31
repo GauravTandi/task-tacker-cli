@@ -5,12 +5,13 @@
 It is a simple command line interface(CLI) to track what you need to do, what you have done, and what you are currently working on.
 
 ## How to use
-        
+### Video Tutorial 
+Youtube Video: https://youtu.be/zVQqziU9nJk?si=0a977aea05PM7bTV
 * Add task - python script.py add taskname   
    
     Note- do not give space in task name    
-    No(task name) yes(taskname) or yes(task-name)    
-    ie - no(study history) yes(study-history) or use_underscore(study_history)   
+    ❌(task name) ✅(taskname) or ✅(task-name)    
+    ie - ❌(study history) ✅(study-history) or ✅ use_underscore(study_history)   
     example :-   
 
 ```bash
@@ -32,12 +33,12 @@ It is a simple command line interface(CLI) to track what you need to do, what yo
 
 * Delete task - python script.py delete 1
 ```bash
-        └─$ python task-cli.py delete 1
+    └─$ python task-cli.py delete 1
 
-        gym and abs workout 
+    gym and abs workout 
 
-        Deleting....
-        Deleted successfully!
+    Deleting....
+    Deleted successfully!
 ```
 * List all task - python script.py list  
         example:-  
